@@ -1,8 +1,8 @@
 package parental;
 
 public class Restriction {
-    private String type;      // e.g. "App Block", "Screen Time Limit"
-    private int duration;     // in hours
+    private String type;
+    private int duration; // in hours
 
     public Restriction(String type, int duration) {
         this.type = type;
