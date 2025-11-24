@@ -1,6 +1,7 @@
-parental\DemoApp.class
-parental\Restriction.class
 parental\Settings.class
-parental\Adolescent.class
+parental\Controllable.class
 parental\Device.class
+parental\Main.class
+parental\Restriction.class
+parental\Adolescent.class
 parental\Parent.class

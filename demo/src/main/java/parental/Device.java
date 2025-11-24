@@ -1,28 +1,36 @@
 package parental;
 
-public class Device {
-    private String name;
-    private String os;
-    private boolean restricted;
+/**
+ * A basic device class implementing Controllable.
+ */
+public class Device implements Controllable {
+
+    private final String name;
+    private final String os;
+    private boolean restricted = false;
 
     public Device(String name, String os) {
         this.name = name;
         this.os = os;
-        this.restricted = false;
     }
 
+    @Override
     public void applyRestriction() {
-        this.restricted = true;
-        System.out.println("🔒 Restriction activated on device: " + name);
+        restricted = true;
+        System.out.println("Restriction ON for device " + name);
     }
 
+    @Override
     public void removeRestriction() {
-        this.restricted = false;
-        System.out.println("✅ Restrictions removed from device: " + name);
+        restricted = false;
+        System.out.println("Restrictions OFF for device " + name);
     }
 
     public void showDeviceInfo() {
-        System.out.println("Device: " + name + " | OS: " + os +
-                " | Restricted: " + (restricted ? "Yes" : "No"));
+        System.out.println("Device: " + name + " | OS=" + os + " | Restricted=" + (restricted ? "YES" : "NO"));
+    }
+
+    public boolean isRestricted() {
+        return restricted;
     }
 }

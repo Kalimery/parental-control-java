@@ -1,6 +1,10 @@
 package parental;
 
+/**
+ * Small settings holder for a device or parent preferences.
+ */
 public class Settings {
+
     private boolean nightMode;
     private boolean notificationsEnabled;
 
@@ -9,17 +13,12 @@ public class Settings {
         this.notificationsEnabled = notificationsEnabled;
     }
 
+    public void setNightMode(boolean nightMode) { this.nightMode = nightMode; }
+    public void setNotificationsEnabled(boolean notificationsEnabled) { this.notificationsEnabled = notificationsEnabled; }
+
     public void displaySettings() {
         System.out.println("Settings:");
-        System.out.println("   - Night Mode: " + (nightMode ? "ON" : "OFF"));
-        System.out.println("   - Notifications: " + (notificationsEnabled ? "ON" : "OFF"));
-    }
-
-    public void setNightMode(boolean nightMode) {
-        this.nightMode = nightMode;
-    }
-
-    public void setNotificationsEnabled(boolean notificationsEnabled) {
-        this.notificationsEnabled = notificationsEnabled;
+        System.out.println("  - Night Mode: " + (nightMode ? "ON" : "OFF"));
+        System.out.println("  - Notifications: " + (notificationsEnabled ? "ON" : "OFF"));
     }
 }
